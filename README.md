@@ -1,3 +1,3 @@
-# POC Redis Cache 
+# Redis service 
 
-Demonstration of using Redis as a cache and clearing the cache after every minute using CRON expression
+Demonstration of using Redis as a cache and database and clearing the cache at specified time using CRON expression
