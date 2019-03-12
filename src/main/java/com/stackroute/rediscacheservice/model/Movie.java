@@ -1,15 +1,34 @@
 package com.stackroute.rediscacheservice.model;
 
-import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.io.Serializable;
 
-@Document(collection = "movies")
-@Data
 public class Movie implements Serializable {
-    @Id
-    private int movieId;
+    private String movieId;
+
+    public Movie(String movieId, String movieTitle) {
+        this.movieId = movieId;
+        this.movieTitle = movieTitle;
+    }
     private String movieTitle;
+
+    public String getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(String movieId) {
+        this.movieId = movieId;
+    }
+
+    public String getMovieTitle() {
+        return movieTitle;
+    }
+
+    public void setMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
+    }
+
+
+
+
+
 }
